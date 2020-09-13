@@ -1,0 +1,29 @@
+1st Test: 10 minutes, battery from 90% -> 89%
+2nd Test: 1 hour, battery from 87% -> 81%
+
+Overall, linear battery usage, 1% every 10 minutes.
+Hoping that by reducing the write frequency from every second to every 2 seconds,
+I can halve the battery usage by the app. 
+
+3rd Test - Light sensor writing every 2 seconds, still used 6%
+
+4th Test - 2 sensors (Light and Accelerometer) writing every second for an hour: 92% -> 83%
+Overall usage 9% :( going to see if I can optimize it.
+
+5th Test - 2 sensors (Light and Accelerometer) writing every 3 seconds for an hour: 44% - 35%
+Overall usage 9%
+
+6th Test - 2 sensors, no write to database, polling every second: 61% -> 53%
+Overall usage 8%
+
+7th Test - No CPU Lock, screen off, 2 sensors, polling every 3 seconds: 95% -> 87%
+
+8th Test - 2 sensors, write to DB, polling every 30 seconds for 10 minutes: 63% - 62%
+
+9th Test - 2 sensors, write to DB, polling every 15 seconds for 10 minutes: 60% - 59%
+
+10th Test - 2 sensors, write to DB, polling every 15 seconds for 60 minutes: 57% - 50%
+
+11th Test - 2 sensors, write to DB, polling every 30 seconds for 60 minutes: No difference
+
+12th Test - 2 sensors, write to DB, using changeListner: 96% -> 91%! Hooray!

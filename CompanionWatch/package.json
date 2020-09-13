@@ -1,0 +1,37 @@
+{
+  "name": "companionwatch",
+  "version": "1.0.0",
+  "description": "Sensing Project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianjlee11/repository.git"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "idb": "^5.0.4",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.11.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.2",
+    "gulp": "^4.0.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "scripts": {
+    "babel-init": "babel src --out-dir public",
+    "browserify-init": "browserify public/main.js > tempbundle.js",
+    "babel-bundle": "babel tempbundle.js --out-file bundle.js"
+  },
+  "author": "Brian Lee",
+  "license": "ISC",
+  "type": "module"
+}

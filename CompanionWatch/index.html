@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<title>Gear UI</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+		href="lib/tau/wearable/theme/default/tau.circle.min.css">
+	<!-- load theme file for your application -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="ui-page ui-page-active" id="main">
+		<header class="ui-header" id="main-header">
+			<h2 class="ui-title">FileTransferSender</h2>
+		</header>
+		<div class="ui-content">
+			<ul class="ui-listview ui-snap-listview">
+				<li id="startSensor"><a href="#">Start Sensor</a></li>
+				<li><a href="#choose-sensor">Choose Sensors</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ui-page" id="choose-sensor">
+		<header class="ui-header">
+			<h2 class=ui-title>Choose Sensors</h2>
+		</header>
+		<div class="ui-content">
+			<ul class="ui-listview">
+				<li class="li-has-checkbox">
+					<label>
+						Light Sensor
+						<input type="checkbox" id="light-check"/>
+					</label>
+				</li>
+				<li class="li-has-checkbox">
+					<label>
+						Pressure Sensor
+						<input type="checkbox" id="press-check"/>
+					</label>
+				</li>
+				</li>
+				<li class="li-has-checkbox">
+					<label>
+						Accelerometer
+						<input type="checkbox" id="accel-check"/>
+					</label>
+				</li>
+			</ul>
+			<footer class="ui-footer ui-bottom-button">
+				<button class="ui-btn" id="toMainPage">Next</button>
+			</footer>
+		</div>
+	</div>
+	<div class="ui-page" id="manage">
+		<header class="ui-header">
+			<h2 class="ui-title">Manage Sensors</h2>
+		</header>
+		<div class="ui-content">
+			<ul class="ui-listview ui-snap-listview">
+				<li id="stopSensor"><a href="#">Stop Sensors</a></li>
+				<li id="writeData"><a href="#">Write Data</a></li>
+				<li id="connect"><a href="#">Send File</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ui-page" id="sendPage">
+		<header class="ui-header">
+			<h2 class="ui-title">Send file ...</h2>
+		</header>
+		<div class="ui-content content-padding text-centered">
+			<progress max="100" value="0" id="file-progress"></progress>
+			<div class="ui-progress-ratio" id="file-ratio"></div>
+		</div>
+		<footer class="ui-footer ui-bottom-button">
+			<button class="ui-btn" id="cancelButton">Cancel</button>
+		</footer>
+	</div>
+	<div id="popupToast" class="ui-popup ui-popup-toast">
+		<div id="popupToastMsg" class="ui-popup-content" style="overflow-y:scroll;"></div>
+	</div>
+</body>
+<script type="text/javascript" src="lib/tau/wearable/js/tau.js"></script>
+<script type="text/javascript" src="js/circle-helper.js"></script>
+<!-- load javascript file for your application -->
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/sap.js"></script>
+<script type="text/javascript" src="dist/scripts/bundle.js"></script>
+</html>
