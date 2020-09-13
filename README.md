@@ -9,8 +9,11 @@ With this project, I am:
 Currently, I have developed a Samsung Smartwatch app to be used for inital testing where I will be researching what kind of uses people with chronic illnesses with simple set of sensors onboard the smartwatch (light, acceleration, pressure sensors).
 
 The app was developed using browser-side JavaScript and Tizen SDK, the operating system used by Samsung Smartwatches.
+
 For the UI, I utilized the [**TAU Advanced UI library**](https://samsung.github.io/TAU/), making the UI implementation process simple.
+
 The only dependency with the project is the [**IndexedDB but with Promises**](https://github.com/jakearchibald/idb) used as the main datastore for the project.
+
 The project was built using browserify combined with babelify, and the process was automated using Gulp. 
 
 # How to run Tizen Samsung Gear emulator with a real android phone
