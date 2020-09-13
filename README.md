@@ -1,3 +1,18 @@
+# Project Overview
+This is a summer project I have worked on over the 2020 Summer at the Make4All lab in lieu of my cancelled summer internship. 
+
+With this project, I am:
+* Researching how people with chronic illnesses would like to use sensors onboard the smartwatches and smartphones
+* Use sensors to help with the tracking process of symptoms that may occur throughout the day
+* Developing a Samsung smartwatch app to conduct technology probe to see what kind of uses they find
+
+Currently, I have developed a Samsung Smartwatch app to be used for inital testing where I will be researching what kind of uses people with chronic illnesses with simple set of sensors onboard the smartwatch (light, acceleration, pressure sensors).
+
+The app was developed using browser-side JavaScript and Tizen SDK, the operating system used by Samsung Smartwatches.
+For the UI, I utilized the [**TAU Advanced UI library**](https://samsung.github.io/TAU/), making the UI implementation process simple.
+The only dependency with the project is the [**IndexedDB but with Promises**](https://github.com/jakearchibald/idb) used as the main datastore for the project.
+The project was built using browserify combined with babelify, and the process was automated using Gulp. 
+
 # How to run Tizen Samsung Gear emulator with a real android phone
 **(You need to follow this EXACT steps for it to run properly)**
 
